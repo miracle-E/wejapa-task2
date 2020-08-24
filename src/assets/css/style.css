@@ -1,5 +1,7 @@
 body , *{
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* font-family: 'https://fonts.google.com/specimen/Poppins#standard-styles'; */
+font-weight:  500, 700;
 }
 
 .round {
@@ -22,17 +24,17 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .btn-teal {
-  background-color: #56d1d2 !important;
+  background-color: hsl(180, 66%, 49%) !important;
   color: white !important;
-  border: 1px solid #56d1d2 !important;
+  border: 1px solid hsl(180, 66%, 49%) !important;
   padding-left: 15px;
   padding-right: 15px;
   font-size: smaller;
 }
 
 .btn-teal:hover {
-  background-color: #9ae2e2 !important;
-  border-color: #9ae2e2 !important;
+  background-color: hsl(180, 66%, 59%) !important;
+  border-color: hsl(180, 66%, 59%) !important;
 }
 
 .navbar-nav .nav-item:hover{
@@ -48,10 +50,21 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   position: relative;
   top: -120px;
 }
-footer li:hover, footer li a:hover{
-  color: #3e9191 !important;
+footer li:hover, footer li a:hover, .link-item .short-link {
+  color: hsl(180, 66%, 59%) !important;
   text-decoration: none;
 }
+
+.search-form .error {
+  color: hsl(0, 87%, 67%);
+  background-color: white;
+  border: 2px solid hsl(0, 87%, 67%);
+}
+.search-form .text-danger {
+  color: hsl(0, 87%, 67%);
+  font-style: italic;
+}
+
 @media only screen and (min-width: 768px) {
   .search-form #search-input {
     width: 80%;

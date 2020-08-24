@@ -49,6 +49,19 @@
 
   export default {
     name: 'App',
+    meta: {
+      title: 'Wejapa task 2',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'The home page of our example app.'
+        },
+        {
+          property: 'viewport',
+          content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+        }
+      ]
+    },
     components: {
       Navbar,
       Banner,
@@ -60,27 +73,15 @@
     },
     data() {
       return {
-        linkList: [
-          {
-            "hashid": "Nn8y9p",
-            "url": "https://news.ycombinator.com/",
-            "created_at": "2019-06-18T21:29:57.922801Z"
-          },
-          {
-            "hashid": "Nn8y9p",
-            "url": "https://news.ycombinator.com/",
-            "created_at": "2019-06-18T21:29:57.922801Z"
-          },
-          {
-            "hashid": "Nn8y9p",
-            "url": "https://news.ycombinator.com/",
-            "created_at": "2019-06-18T21:29:57.922801Z"
-          }
-        ]
+        
+      }
+    },
+    computed: {
+      linkList () {
+        return this.$store.state.links.allLinks || []
       }
     },
     mounted() {
-      console.log('Axios : ', this.$axios)
       this.$store.dispatch('links/setAllLinks', this.linkList)
     },
   }
