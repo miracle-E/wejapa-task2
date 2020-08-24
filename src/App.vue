@@ -35,6 +35,8 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import Vuex from 'vuex'
   import Navbar from './components/layout/_navbar'
   import Banner from './components/layout/_banner'
   import ActionCall from './components/layout/_callAction'
@@ -42,6 +44,8 @@
   import Footer from './components/layout/_footer'
   import SearchForm from './components/searchForm'
   import LinkList from './components/linkList'
+
+  Vue.use(Vuex)
 
   export default {
     name: 'App',
@@ -74,6 +78,10 @@
           }
         ]
       }
+    },
+    mounted() {
+      console.log('Axios : ', this.$axios)
+      this.$store.dispatch('links/setAllLinks', this.linkList)
     },
   }
 </script>
